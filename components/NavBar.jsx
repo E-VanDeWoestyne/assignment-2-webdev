@@ -22,7 +22,7 @@ const NavBar = () => {
                 href="/"
                 className="text-2xl text-black hover:text-blue-800"
               >
-                Southern Alberta Institute of Technology
+                Southern Alberta Junior Highschool
               </Link>
             </h1>
           </div>

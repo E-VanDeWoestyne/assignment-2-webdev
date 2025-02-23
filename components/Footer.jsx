@@ -6,7 +6,7 @@ const Footer = () => {
       <nav className="bg-zinc-600 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-white text-base font-bold">
-            Southern Alberta Institute of Technology
+            Southern Alberta Junior Highschool
           </h1>
           <p className="text-white">1301 16 Avenue NW | Calgary, AB T2M 0L4</p>
         </div>
