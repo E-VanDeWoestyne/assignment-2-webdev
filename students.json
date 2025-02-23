@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "dateOfBirth": "2008-05-14",
+      "currentGrade": "8"
+    },
+    {
+      "firstName": "Emma",
+      "lastName": "Smith",
+      "dateOfBirth": "2009-09-23",
+      "currentGrade": "7"
+    },
+    {
+      "firstName": "Liam",
+      "lastName": "Johnson",
+      "dateOfBirth": "2010-02-17",
+      "currentGrade": "6"
+    },
+    {
+      "firstName": "Olivia",
+      "lastName": "Brown",
+      "dateOfBirth": "2007-12-05",
+      "currentGrade": "9"
+    }
+  ]
+}
