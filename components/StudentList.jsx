@@ -1,16 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
 
-const StudentList = () => {
-  const [students, setStudents] = useState([]);
-
-  useEffect(() => {
-    fetch("/students.json")
-      .then((response) => response.json())
-      .then((data) => setStudents(data.students))
-      .catch((error) => console.error("Error loading students:", error));
-  }, []);
-
+const StudentList = ({ students }) => {
   return (
     <div className="bg-white rounded shadow-lg p-4">
       <h2 className="text-xl font-bold p-4">Student List</h2>

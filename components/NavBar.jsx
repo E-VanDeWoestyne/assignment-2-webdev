@@ -27,7 +27,7 @@ const NavBar = () => {
             </h1>
           </div>
           <div className="bg-white p-4 rounded flex gap-5 items-center shadow-lg">
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-4 font-bold">
               <li>
                 <Link
                   href="/"

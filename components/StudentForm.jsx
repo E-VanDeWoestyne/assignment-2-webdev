@@ -1,65 +1,81 @@
 "use client";
+
 import { useState } from "react";
 
-export default function AddStudentForm({ onAddStudent }) {
+export default function StudentForm({ addStudent }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    dateOfBirth: "",
+    dob: "",
     grade: "",
   });
 
-  // Function to add a new student to the list
-  const handleAddStudent = (newStudent) => {
-    setStudents([...students, { ...newStudent, id: students.length + 1 }]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      !formData.firstName ||
-      !formData.lastName ||
-      !formData.dateOfBirth ||
-      !formData.grade
-    ) {
-      alert("All fields are required!");
-      return;
-    }
-    onAddStudent(formData);
-    setFormData({ firstName: "", lastName: "", dateOfBirth: "", grade: "" }); // Clear form
+    const newStudent = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      dateOfBirth: formData.dob,
+      currentGrade: formData.grade,
+    };
+
+    addStudent(newStudent); // Update the list in parent component
+    setFormData({ firstName: "", lastName: "", dob: "", grade: "" }); // Clear form
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="First Name"
-        value={formData.firstName}
-        onChange={(e) =>
-          setFormData({ ...formData, firstName: e.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Last Name"
-        value={formData.lastName}
-        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-      />
-      <input
-        type="date"
-        placeholder="Date of Birth"
-        value={formData.dateOfBirth}
-        onChange={(e) =>
-          setFormData({ ...formData, dateOfBirth: e.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Grade"
-        value={formData.grade}
-        onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
-      />
-      <button type="submit">Add Student</button>
-    </form>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h2 className="text-xl font-bold mb-4">Add New Student</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          value={formData.lastName}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+        <input
+          type="date"
+          name="dob"
+          value={formData.dob}
+          onChange={handleChange}
+          required
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+        <input
+          type="number"
+          name="grade"
+          placeholder="Grade"
+          value={formData.grade}
+          onChange={handleChange}
+          required
+          min="1"
+          max="12"
+          className="w-full p-2 border border-gray-300 rounded"
+        />
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white p-2 rounded"
+        >
+          Add Student
+        </button>
+      </form>
+    </div>
   );
 }
