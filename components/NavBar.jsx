@@ -8,9 +8,9 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <div>
-      <nav className="bg-zinc-600 p-4">
+      <nav className="bg-zinc-600 p-4 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="bg-white p-4 rounded flex gap-5 items-center">
+          <div className="bg-white p-4 rounded flex gap-5 items-center shadow-lg">
             <Image
               src="/sait_logo.png"
               alt="SAIT logo"
@@ -26,7 +26,7 @@ const NavBar = () => {
               </Link>
             </h1>
           </div>
-          <div className="bg-white p-4 rounded flex gap-5 items-center">
+          <div className="bg-white p-4 rounded flex gap-5 items-center shadow-lg">
             <ul className="flex space-x-4">
               <li>
                 <Link

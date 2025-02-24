@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <nav className="bg-zinc-600 p-4">
+      <nav className="bg-zinc-600 p-4 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-white text-base font-bold">
             Southern Alberta Junior Highschool
