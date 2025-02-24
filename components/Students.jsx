@@ -16,7 +16,7 @@ const Students = () => {
     setStudents((prevStudents) => [...prevStudents, newStudent]);
   };
   return (
-    <div>
+    <div className="rounded-md shadow-lg bg-zinc-500">
       <StudentList students={students} />
       <StudentForm addStudent={addStudent} />
     </div>
