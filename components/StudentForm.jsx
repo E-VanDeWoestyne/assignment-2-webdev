@@ -1,21 +1,32 @@
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 export default function AddStudentForm({ onAddStudent }) {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    dateOfBirth: '',
-    grade: '',
+    firstName: "",
+    lastName: "",
+    dateOfBirth: "",
+    grade: "",
   });
+
+  // Function to add a new student to the list
+  const handleAddStudent = (newStudent) => {
+    setStudents([...students, { ...newStudent, id: students.length + 1 }]);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.firstName || !formData.lastName || !formData.dateOfBirth || !formData.grade) {
-      alert('All fields are required!');
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.dateOfBirth ||
+      !formData.grade
+    ) {
+      alert("All fields are required!");
       return;
     }
     onAddStudent(formData);
-    setFormData({ firstName: '', lastName: '', dateOfBirth: '', grade: '' }); // Clear form
+    setFormData({ firstName: "", lastName: "", dateOfBirth: "", grade: "" }); // Clear form
   };
 
   return (
@@ -24,7 +35,9 @@ export default function AddStudentForm({ onAddStudent }) {
         type="text"
         placeholder="First Name"
         value={formData.firstName}
-        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+        onChange={(e) =>
+          setFormData({ ...formData, firstName: e.target.value })
+        }
       />
       <input
         type="text"
@@ -36,7 +49,9 @@ export default function AddStudentForm({ onAddStudent }) {
         type="date"
         placeholder="Date of Birth"
         value={formData.dateOfBirth}
-        onChange={(e) => setFormData({ ...formData, dateOfBirth: e.target.value })}
+        onChange={(e) =>
+          setFormData({ ...formData, dateOfBirth: e.target.value })
+        }
       />
       <input
         type="text"
