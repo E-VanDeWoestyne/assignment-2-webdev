@@ -1,6 +1,8 @@
 "use client";
-
 import { useState } from "react";
+
+// Created 24-02-25
+// Provides the Student form to add data into the Student list
 
 export default function StudentForm({ addStudent }) {
   const [formData, setFormData] = useState({

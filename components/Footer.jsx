@@ -1,5 +1,8 @@
 import React from "react";
 
+// Created 24-02-25
+// Provides the footer navbar to display Collegge information
+
 const Footer = () => {
   return (
     <div>

@@ -1,5 +1,8 @@
 "use client";
 
+// Created 24-02-25
+// This page will print or display the Student list data 
+
 const StudentList = ({ students }) => {
   return (
     <div className="p-4">
