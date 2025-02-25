@@ -1,8 +1,22 @@
 "use client";
 import { useState } from "react";
 
-// Created 24-02-25
-// Provides the Student form to add data into the Student list
+/*
+  Name: [Yash Kakadiya, Ethan Van De Woestyne, Precious Robert-Ezenta]
+  
+  Date: [24-02-25]
+
+  Program Description: This React component, StudentForm, allows users to add a new student by inputting their first name, last name, date of birth, and grade. 
+  The form captures user input, updates state using the useState hook, and sends the student data to the parent component via the addStudent function. 
+  Once submitted, the form clears its fields, ensuring a smooth user experience.
+  
+  Inputs: First Name, Last Name, Date of Birth, Grade (1-12)
+  
+  Processing: Captures user input, updates state, and submits data to the parent component
+  
+  Output: Sends a new student object to the parent component and resets the form
+*/
+
 
 export default function StudentForm({ addStudent }) {
   const [formData, setFormData] = useState({

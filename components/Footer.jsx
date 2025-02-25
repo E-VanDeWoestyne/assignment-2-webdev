@@ -1,7 +1,20 @@
 import React from "react";
 
-// Created 24-02-25
-// Provides the footer navbar to display Collegge information
+/**
+  Name: [Yash Kakadiya, Ethan Van De Woestyne, Precious Robert-Ezenta]
+  
+  Date: [24-02-25]
+
+  Program Description: This React functional component defines a footer for the Southern Alberta Junior High School website.
+  The footer includes the school's name and address, styled using Tailwind CSS classes.
+  The component is structured using a navigation bar with flexbox utilities for alignment.
+
+  Input: No user input is required.
+  
+  Processing: The component renders static content using JSX and Tailwind CSS classes.
+  
+  Output: Displays the footer with the school’s name and address.
+ */
 
 const Footer = () => {
   return (

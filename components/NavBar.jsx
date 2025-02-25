@@ -2,8 +2,21 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Created 23-02-25
-// Provides the header navbar that can be adjusted to navigate to new pages
+/*  
+  Name: [Yash Kakadiya, Ethan Van De Woestyne, Precious Robert-Ezenta]
+  
+  Date: [24-02-25]
+
+  Description: This React component defines a navigation bar for the Southern Alberta Junior Highschool website. 
+  It includes a logo, school name, and a navigation link to the home page. The navigation bar 
+  is styled using Tailwind CSS and utilizes Next.js components such as Image and Link.
+              
+  Inputs: None
+  
+  Processing: Renders a navigation bar with a school logo, name, and a home link.
+  
+  Output: A visually styled navigation bar displayed on the webpage.
+ */
 
 const NavBar = () => {
   return (

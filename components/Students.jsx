@@ -3,8 +3,21 @@ import { useEffect, useState, React } from "react";
 import StudentForm from "./StudentForm";
 import StudentList from "./StudentList";
 
-// Created 24-02-25
-// Display Student data
+/*
+  Name: [Yash Kakadiya, Ethan Van De Woestyne, Precious Robert-Ezenta]
+  
+  Date: [24-02-25]
+
+  Program Description: This React component manages a list of students by fetching data from a JSON file 
+  and allowing users to add new students. The component consists of two main parts: 
+  a student list that displays existing students and a form to add new students.
+
+  Inputs: Fetches student data from "students.json" and accepts new student entries via a form. 
+  
+  Processing: Stores student data in a state variable and updates it when a new student is added. 
+  
+  Output: Displays the list of students and dynamically updates it when a new student is added.
+ */
 
 const Students = () => {
   const [students, setStudents] = useState([]);
