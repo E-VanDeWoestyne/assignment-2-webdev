@@ -4,7 +4,7 @@ import StudentForm from "./StudentForm";
 import StudentList from "./StudentList";
 
 // Created 24-02-25
-// Provides the header navbar that can be adjusted to navigate to new pages
+// Display Student data
 
 const Students = () => {
   const [students, setStudents] = useState([]);
